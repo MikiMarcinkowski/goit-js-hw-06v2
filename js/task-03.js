@@ -14,7 +14,7 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
-const img = images.map((image) => ` <li><img src= ${image.url} alt= "${image.alt}"></li> `)
+const img = images.map((image) => ` <li><img src= ${image.url} alt= "${image.alt}" width= 300px></li> `)
   .join("");
 
 
@@ -24,4 +24,4 @@ gallery.style.display = 'flex';
 gallery.style.flexWrap = 'wrap';
 gallery.style.gap = '50px';
 gallery.style.listStyle = 'none';
-
+// image.style.width = '50px'
