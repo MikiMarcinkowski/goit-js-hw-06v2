@@ -9,10 +9,13 @@ const ingredients = [
 
 const allIngredients = document.querySelector('#ingredients');
 
+const liArray = [];
+
 ingredients.forEach((ingredient) => {
   const liItem = document.createElement('li');
   liItem.textContent = `${ingredient}`;
   liItem.classList.add('item');
-  
-  allIngredients.append(liItem)
+  liArray.push(liItem);  
 });
+
+allIngredients.append(...liArray);
