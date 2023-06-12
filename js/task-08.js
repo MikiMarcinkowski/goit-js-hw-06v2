@@ -1,25 +1,23 @@
-const form = document.querySelector('.login-form');
+const form = document.querySelector(".login-form");
 
-form.addEventListener('submit', onFormSubmit);
+form.addEventListener("submit", onFormSubmit);
 
 function onFormSubmit(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    const {
-        elements: { email, password }
-    } = event.currentTarget;
+  const {
+    elements: { email, password },
+  } = event.currentTarget;
 
-    if (email.value === '' || password.value === '') {
-         alert("Uzupełnij wszystkie pola");
-    }
+  if (email.value == "" || password.value == "") {
+    return alert("Uzupełnij wszystkie pola");
+  }
 
-    const userData = {
-        email: event.currentTarget.elements.email,
-        password: event.currentTarget.elements.password
-    }
-    console.log(userData);
+  const userData = {
+    email: email.value,
+    password: password.value,
+  };
+  console.log(userData);
 
-    form.reset;
-
+  form.reset();
 }
-
